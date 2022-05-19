@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>三目並べ</title>
+    </head>
+    <body>
+        <h1>三目並べ</h1>
+        <canvas id="canvas"></canvas>
+
+        <script>
+            let canvas = document.getElementById('canvas');
+            canvas.width = 400;
+            canvas.height = 400;
+
+            let w =300, h =300;
+            let x0 =50, y0 =50;
+
+            if (canvas.getContext){
+                let ctx = canvas.getContext('2d');
+
+                ctx.strokeRect(x0,y0,w,h);
+
+                ctx.beginPath();
+                ctx.moveTo(150,50);
+                ctx.lineTo(150,350);
+                ctx.moveTo(250,50);
+                ctx.lineTo(250,350);
+                ctx.moveTo(50,150);
+                ctx.lineTo(350,150);
+                ctx.moveTo(50,250);
+                ctx.lineTo(350,250);
+                ctx.stroke();
+
+            }
+
+            canvas.addEventListener('click',function(e){
+                ctx.strokeText(a,100,100);
+            })
+        </script>       
+
+            
+    </body>
+</html>
